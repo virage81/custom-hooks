@@ -1,4 +1,5 @@
 import { Demo } from './sections/Fetch';
+import { Hover } from './sections/Hover';
 import { LocalStorage } from './sections/LocalStorage';
 
 export function App() {
@@ -8,6 +9,7 @@ export function App() {
 			<main className='flex flex-col items-center justify-center gap-5'>
 				<Demo />
 				<LocalStorage />
+				<Hover />
 			</main>
 		</div>
 	);
