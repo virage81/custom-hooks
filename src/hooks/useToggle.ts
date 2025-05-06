@@ -1,13 +1,19 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
-type UseToggleResponse = [boolean, (value?: boolean) => void];
+export const useToggle = <T extends string>(initial: T[]): [T, (value?: T) => void] => {
+	const [value, setValue] = useState<T>(initial[0]);
+	const index = useRef(0);
 
-export function useToggle(initialValue: boolean = false): UseToggleResponse {
-	const [value, setValue] = useState(initialValue);
+	const toggleValue = (providedValue?: T) => {
+		if (!providedValue) {
+			index.current = index.current === initial.length - 1 ? 0 : index.current + 1;
+			setValue(initial[index.current]);
+		} else {
+			setValue(providedValue);
 
-	function toggleValue(value?: boolean) {
-		setValue(prev => (typeof value === 'boolean' ? value : !prev));
-	}
+			index.current = initial.indexOf(providedValue);
+		}
+	};
 
 	return [value, toggleValue];
-}
+};
