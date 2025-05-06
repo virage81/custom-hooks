@@ -1,6 +1,7 @@
 import { Demo } from './sections/Fetch';
 import { Hover } from './sections/Hover';
 import { LocalStorage } from './sections/LocalStorage';
+import { Viewport } from './sections/Viewport';
 
 export function App() {
 	return (
@@ -10,6 +11,7 @@ export function App() {
 				<Demo />
 				<LocalStorage />
 				<Hover />
+				<Viewport />
 			</main>
 		</div>
 	);
