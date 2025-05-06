@@ -54,3 +54,16 @@ Learn how to use and implement custom hooks
 - Created useViewportSize hook using useWindowEvent
 - Typed useViewportSize hook
 - Changed layout for section which is using this hook
+
+## 5. useWindowScroll hook
+
+### Goal:
+
+- Implement useWindowScroll hook
+- Type useWindowScroll hook
+
+### Implementation
+
+- Created useWindowScroll hook using useWindowEvent
+- Typed useWindowScroll hook
+- Changed layout for section which is using this hook
