@@ -67,3 +67,15 @@ Learn how to use and implement custom hooks
 - Created useWindowScroll hook using useWindowEvent
 - Typed useWindowScroll hook
 - Changed layout for section which is using this hook
+
+## 5. useToggle hook
+
+### Goal:
+
+- Change useToggle hook to work with string[]
+
+### Implementation
+
+- Changed useToggle hook
+- Changed useToggle types
+- Changed layout for section which is using this hook
