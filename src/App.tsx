@@ -1,6 +1,7 @@
 import { Fetch } from './sections/Fetch';
 import { Hover } from './sections/Hover';
 import { LocalStorage } from './sections/LocalStorage';
+import { Scroll } from './sections/Scroll';
 import { Viewport } from './sections/Viewport';
 
 export function App() {
@@ -12,6 +13,7 @@ export function App() {
 				<LocalStorage />
 				<Hover />
 				<Viewport />
+				<Scroll />
 			</main>
 		</div>
 	);
