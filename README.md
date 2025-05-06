@@ -25,5 +25,18 @@ Learn how to use and implement custom hooks
 ### Implementation
 
 - Created useLocalStorage hook
-- Types useLocalStorage hook
+- Typed useLocalStorage hook
+- Changed layout for section which is using this hook
+
+## 3. useHover hook
+
+### Goal:
+
+- Implement useHover hook
+- Type useHover hook
+
+### Implementation
+
+- Created useHover hook
+- Typed useHover hook
 - Changed layout for section which is using this hook
