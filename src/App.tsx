@@ -1,4 +1,5 @@
 import { Demo } from './sections/Fetch';
+import { LocalStorage } from './sections/LocalStorage';
 
 export function App() {
 	return (
@@ -6,6 +7,7 @@ export function App() {
 			<h1 className='text-4xl font-bold capitalize text-center'>Custom Hooks training</h1>
 			<main className='flex flex-col items-center justify-center gap-5'>
 				<Demo />
+				<LocalStorage />
 			</main>
 		</div>
 	);

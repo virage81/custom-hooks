@@ -1,17 +1,38 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-function getValueStorage<T>(key: string, initial: T) {
-	if (initial instanceof Function) return initial();
+type LocalStorageSetValue = string;
+type LocalStorageReturnValue = LocalStorageSetValue | null;
 
-	return localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key) as string) : initial;
-}
+type UseLocalStorage = (key: string) => [
+	value: LocalStorageReturnValue,
+	{
+		setItem: (value: LocalStorageSetValue) => void;
+		removeItem: () => void;
+	}
+];
 
-export function useLocalStorage<T>(key: string, initial: T) {
-	const [value, setValue] = useState(() => getValueStorage(key, initial));
+const getValueFromLocalStorage = (key: string) => {
+	return localStorage.getItem('key') ? JSON.parse(localStorage.getItem(key) as string) : null;
+};
 
-	useEffect(() => {
+export const useLocalStorage: UseLocalStorage = (key: string) => {
+	const [value, setValue] = useState(() => getValueFromLocalStorage(key));
+
+	const setItem = (value: LocalStorageSetValue) => {
 		localStorage.setItem(key, JSON.stringify(value));
-	}, [key, value]);
+		setValue(value);
+	};
 
-	return [value, setValue];
-}
+	const removeItem = () => {
+		localStorage.removeItem(key);
+		setValue(null);
+	};
+
+	return [
+		value,
+		{
+			setItem,
+			removeItem,
+		},
+	];
+};
