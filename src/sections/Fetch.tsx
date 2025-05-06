@@ -5,7 +5,7 @@ interface Post {
 	title: string;
 }
 
-export function Demo() {
+export function Fetch() {
 	const { data, isLoading, error, refetch } = useFetch<Post>('https://jsonplaceholder.typicode.com/posts');
 
 	return (
@@ -17,7 +17,7 @@ export function Demo() {
 					onClick={() =>
 						refetch({
 							params: {
-								_limit: 100,
+								_limit: 3,
 							},
 						})
 					}>
