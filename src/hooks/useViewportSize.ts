@@ -1,4 +1,5 @@
-import { useLayoutEffect, useState } from 'react';
+import { useState } from 'react';
+import { useWindowEvent } from './useWindowEvent';
 
 type UseViewportSize = () => {
 	width: number;
@@ -16,22 +17,12 @@ export const useViewportSize: UseViewportSize = () => {
 		height: typeof window !== 'undefined' ? window.innerHeight : 0,
 	}));
 
-	const resizeEvent = () => {
+	useWindowEvent('resize', () => {
 		setViewport({
 			width: window.innerWidth,
 			height: window.innerHeight,
 		});
-	};
-
-	useLayoutEffect(() => {
-		if (typeof window === 'undefined') return;
-
-		window.addEventListener('resize', resizeEvent);
-
-		return () => {
-			window.removeEventListener('resize', resizeEvent);
-		};
-	}, []);
+	});
 
 	return viewport;
 };

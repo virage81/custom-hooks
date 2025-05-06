@@ -40,3 +40,17 @@ Learn how to use and implement custom hooks
 - Created useHover hook
 - Typed useHover hook
 - Changed layout for section which is using this hook
+
+## 4. useViewportSize hook
+
+### Goal:
+
+- Implement useViewportSize hook
+- Type useViewportSize hook
+- (Optional) implement hook using useWindowEvent
+
+### Implementation
+
+- Created useViewportSize hook using useWindowEvent
+- Typed useViewportSize hook
+- Changed layout for section which is using this hook
