@@ -68,7 +68,7 @@ Learn how to use and implement custom hooks
 - Typed useWindowScroll hook
 - Changed layout for section which is using this hook
 
-## 5. useToggle hook
+## 6. useToggle hook
 
 ### Goal:
 
