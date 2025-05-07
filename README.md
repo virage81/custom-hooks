@@ -1,28 +1,28 @@
 # Custom Hooks
 
-## About project:
+## About project
 
 Learn how to use and implement custom hooks
 
 ## 1. useFetch hook
 
-### Goal:
+### 1. Goal
 
 - Implement useFetch hook
 
-### Implementation
+### 1. Implementation
 
 - Created useFetch hook
 - Changed layout for section which is using this hook
 
 ## 2. useLocalStorage hook
 
-### Goal:
+### 2. Goal
 
 - Implement useLocalStorage hook
 - Type useLocalStorage hook
 
-### Implementation
+### 2. Implementation
 
 - Created useLocalStorage hook
 - Typed useLocalStorage hook
@@ -30,12 +30,12 @@ Learn how to use and implement custom hooks
 
 ## 3. useHover hook
 
-### Goal:
+### 3. Goal
 
 - Implement useHover hook
 - Type useHover hook
 
-### Implementation
+### 3. Implementation
 
 - Created useHover hook
 - Typed useHover hook
@@ -43,13 +43,13 @@ Learn how to use and implement custom hooks
 
 ## 4. useViewportSize hook
 
-### Goal:
+### 4. Goal
 
 - Implement useViewportSize hook
 - Type useViewportSize hook
 - (Optional) implement hook using useWindowEvent
 
-### Implementation
+### 4. Implementation
 
 - Created useViewportSize hook using useWindowEvent
 - Typed useViewportSize hook
@@ -57,12 +57,12 @@ Learn how to use and implement custom hooks
 
 ## 5. useWindowScroll hook
 
-### Goal:
+### 5. Goal
 
 - Implement useWindowScroll hook
 - Type useWindowScroll hook
 
-### Implementation
+### 5. Implementation
 
 - Created useWindowScroll hook using useWindowEvent
 - Typed useWindowScroll hook
@@ -70,11 +70,11 @@ Learn how to use and implement custom hooks
 
 ## 6. useToggle hook
 
-### Goal:
+### 6. Goal
 
 - Change useToggle hook to work with string[]
 
-### Implementation
+### 6. Implementation
 
 - Changed useToggle hook
 - Changed useToggle types
