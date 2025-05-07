@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useWindowEvent } from './useWindowEvent';
 
 type UseViewportSize = () => {
@@ -12,10 +12,19 @@ interface Viewport {
 }
 
 export const useViewportSize: UseViewportSize = () => {
-	const [viewport, setViewport] = useState<Viewport>(() => ({
-		width: typeof window !== 'undefined' ? window.innerWidth : 0,
-		height: typeof window !== 'undefined' ? window.innerHeight : 0,
-	}));
+	const [viewport, setViewport] = useState<Viewport>({
+		width: window.innerWidth || 0,
+		height: window.innerHeight || 0,
+	});
+
+	useEffect(() => {
+		const width = window.innerWidth || 0;
+		const height = window.innerHeight || 0;
+		setViewport({
+			width,
+			height,
+		});
+	}, []);
 
 	useWindowEvent('resize', () => {
 		setViewport({
